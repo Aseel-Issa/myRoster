@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+
+</head>
+<body>
+    <div>
+            <input class="find" type="text">
+            <button onclick=findTeam()>get Roster</button>
+    </div>
+    <div id="players">
+    </div>
+    <br>
+
+    <script id="player-template" type="text/x-handlebars-template">
+        <div class="player" data-id="{{firstName}} {{lastName}}">
+            <p class="player-full-name">{{firstName}} {{lastName}}</p>
+            <p class="player-jersey">{{jersey}}</p>
+            <img class="player-image" src="https://nba-players.herokuapp.com/players/{{lastName}}/{{firstName}}" onerror="replaceImg(this)">
+            <div class="centered"></div>
+            <p class="player-pos">{{pos}}</p>
+        </div>
+    </script>
+
+    <script src="/jquery/dist/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="Renderer.js"></script>
+    <script src="Fetcher.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
+

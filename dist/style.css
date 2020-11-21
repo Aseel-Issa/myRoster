@@ -1,0 +1,42 @@
+
+.player{
+    display: inline-block;
+    margin: 1%;
+    padding: 1%;
+    background-color: rgb(235, 166, 38);
+    position: relative;
+    text-align: center;
+}
+
+.player > img {
+    background-color: white;
+    height: 184px;
+    width: 254px;
+}
+
+#players{
+    background-color: white;
+    align-self: center;
+}
+
+p{
+    text-align: center;
+}
+
+input{
+    width: 80vw;
+}
+
+button{
+    width: 10vw;
+}
+
+/* Centered text */
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    max-width: 254px;
+  }
